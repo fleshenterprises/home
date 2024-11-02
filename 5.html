@@ -20,8 +20,10 @@
 			width: 100vw;
 			max-width: 100vw;
 			height: auto;
-			max-height: 92vh !important;
-			max-height: 92dvh !important;
+			max-height: 92vh;
+			max-height: 92dvh;
+			padding: 0px;
+  			margin: 0px;
 			position: absolute;
 			bottom: 0px;
 			object-fit: contain;
@@ -34,8 +36,9 @@
 		.crowd{
 			width: 100%;
 			min-width: 100vw;
-			min-width: 100dvw;
 			height: calc(100vh + 20vw);
+			padding: 0px;
+  			margin: 0px;
 			overflow: hidden;
   			background-image: url(pattern.png);
   			background-repeat: repeat;
@@ -57,8 +60,8 @@
 		@media only screen and (max-width: 1200px)
 		{
 			.crowd{
-				height: calc(100vh + 25vw);
-				background-size: auto 25vw;
+				height: calc(100vh + 27.5vw);
+				background-size: auto 27.5vw;
 			}
 
 			@keyframes backg{
@@ -67,29 +70,13 @@
  				}
 
   				to {
-    				transform: translateY(-25vw);
+    				transform: translateY(-27.5vw);
   				}
 			}
 		}
+
 		@media only screen and (max-width: 1024px)
 		{
-			.crowd{
-				height: calc(100vh + 30vw);
-				background-size: auto 30vw;
-			}
-
-			@keyframes backg{
-				from {
-    				transform: translateY(0%);
- 				}
-
-  				to {
-    				transform: translateY(-30vw);
-  				}
-			}
-		}
-
-		@media only screen and (max-width: 768px){
 			.crowd{
 				height: calc(100vh + 35vw);
 				background-size: auto 35vw;
@@ -106,10 +93,10 @@
 			}
 		}
 
-		@media only screen and (max-width: 480px){
+		@media only screen and (max-width: 768px){
 			.crowd{
-				height: calc(100vh + 40vw);
-				background-size: auto 40vw;
+				height: calc(100vh + 42.5vw);
+				background-size: auto 42.5vw;
 			}
 
 			@keyframes backg{
@@ -118,7 +105,24 @@
  				}
 
   				to {
-    				transform: translateY(-40vw);
+    				transform: translateY(-42.5vw);
+  				}
+			}
+		}
+
+		@media only screen and (max-width: 480px){
+			.crowd{
+				height: calc(100vh + 50vw);
+				background-size: auto 50vw;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateY(0%);
+ 				}
+
+  				to {
+    				transform: translateY(-50vw);
   				}
 			}
 		}
