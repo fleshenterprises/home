@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Flesh Enterprises</title>
+	<link rel="shortcut icon" type="image" href="Logo.png">
+	<style>
+		body{
+			padding: 0px;
+  			margin: 0px;
+  			background-color: #ffb6c1;
+  			overflow: hidden;
+  			width: 100vw;
+			min-height: 100%;
+		}
+
+		img{
+			filter: drop-shadow( 0 0 5vw rgb(0, 0, 0, 25%));
+			position: absolute;
+			width: 100vw;
+			height: auto;
+			max-height: 92vh !important;
+			max-height: 92dvh !important;
+			bottom: 0px;
+			max-width: 100vw;
+			object-fit: contain;
+			object-position: bottom;
+			animation: backg2 10s linear infinite;
+			z-index: 2;
+		}
+
+		.crowd{
+			width: 100vw !important;
+			min-height: 150vh !important;
+  			background-image: url(pattern.png);
+  			background-repeat: repeat;
+  			background-size: 20vw auto;
+  			animation: backg 10s linear infinite;
+  			overflow: hidden;
+  			filter: blur(clamp(2px, .15vw, .15vw));
+		}
+
+		@keyframes backg{
+			from {
+    			transform: translateY(0%);
+ 			}
+
+  			to {
+    			transform: translateY(-20vw);
+  			}
+		}
+
+		@media only screen and (max-width: 1200px)
+		{
+			.crowd{
+				background-size: auto 25vw;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateY(0%);
+ 				}
+
+  				to {
+    				transform: translateY(-25vw);
+  				}
+			}
+		}
+		@media only screen and (max-width: 1024px)
+		{
+			.crowd{
+				background-size: auto 30vw;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateY(0%);
+ 				}
+
+  				to {
+    				transform: translateY(-30vw);
+  				}
+			}
+		}
+
+		@media only screen and (max-width: 768px){
+			.crowd{
+				background-size: auto 35vw;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateY(0%);
+ 				}
+
+  				to {
+    				transform: translateY(-35vw);
+  				}
+			}
+		}
+
+		@media only screen and (max-width: 480px){
+			.crowd{
+				background-size: auto 40vw;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateY(0%);
+ 				}
+
+  				to {
+    				transform: translateY(-40vw);
+  				}
+			}
+		}
+	</style>
+	<script src="randomizer.js"></script>
+</head>
+<body onload="firstrandom(5)">
+	<a id="reseter" href="index.html" style="text-decoration: none;">
+		<main>
+			<img src="Gunguy831.png" height="100" width="100">
+			<div class="crowd" id="people"></div>
+		</main>
+	</a>
+</body>
+</html>

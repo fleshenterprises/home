@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Flesh Enterprises</title>
+	<link rel="shortcut icon" type="image" href="Logo.png">
+	<style>
+		body{
+			padding: 0px;
+  			margin: 0px;
+  			background-color: #000000;
+  			overflow: hidden;
+  			width: 100vw;
+			min-height: 100%;
+		}
+
+		main{
+			width: 100vw !important;
+			min-height: 100vh !important;
+			display: flex;
+  			justify-content: center;
+		}
+
+		#eye{
+			display: block;
+			position: fixed;
+  			top: 50%;
+  			left: 50%;
+  			transform: translate(-50%, -50%);
+			object-fit: contain;
+			max-height: 75%;
+ 			max-width: 92%;
+ 			width: clamp(500px, 36.356966146vw, 92vw);
+ 			height: auto;
+		}
+	</style>
+	<script src="randomizer.js"></script>
+	<script>
+		window.addEventListener("load", first, true); 
+
+		function first()
+		{
+			document.getElementById("eye").src = "enterprises logo3.png";
+			setTimeout(() => 
+			{
+				document.getElementById("eye").src = "enterprises logo2.png";
+			}, 130);
+			flash();
+		}
+
+		function flash()
+		{
+			setTimeout(() => 
+			{
+				document.getElementById("eye").src = "enterprises logo3.png";
+				setTimeout(() => 
+				{
+					document.getElementById("eye").src = "enterprises logo2.png";
+				}, 125);
+				flash();
+			}, 2000);
+		}
+	</script>
+</head>
+<body onload="firstrandom(4)">
+	<a id="reseter" href="5.html" style="text-decoration: none;">
+		<main>
+			<img id="eye" src="enterprises logo2.png" height="100" width="100">
+		</main>
+	</a>
+</body>
+</html>
