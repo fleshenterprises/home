@@ -4,35 +4,29 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Flesh Enterprises</title>
+	<link rel="stylesheet" href="initialize.css">
 	<link rel="shortcut icon" type="image" href="Logo.png">
 	<style>
 		body{
-			padding: 0px;
-  			margin: 0px;
   			background-color: #000000;
-  			overflow: hidden;
-  			width: 100vw;
-			min-height: 100%;
 		}
 
 		main{
-			width: 100vw !important;
-			min-height: 100vh !important;
 			display: flex;
   			justify-content: center;
 		}
 
 		#eye{
+			width: clamp(500px, 36.356966146vw, 92vw);
+			max-width: 92vw;
+			height: auto;
+			max-height: 75vh;
 			display: block;
 			position: fixed;
   			top: 50%;
   			left: 50%;
   			transform: translate(-50%, -50%);
 			object-fit: contain;
-			max-height: 75%;
- 			max-width: 92%;
- 			width: clamp(500px, 36.356966146vw, 92vw);
- 			height: auto;
 		}
 	</style>
 	<script src="randomizer.js"></script>

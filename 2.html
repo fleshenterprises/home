@@ -4,115 +4,25 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Flesh Enterprises</title>
+	<link rel="stylesheet" href="initialize.css">
+	<link rel="stylesheet" href="textrepeat.css">
 	<link rel="shortcut icon" type="image" href="Logo.png">
 	<style>
 		body{
-			padding: 0px;
-  			margin: 0px;
   			background-color: #ffff00;
-  			overflow: hidden;
 		}
 
-		main{
-			width: 116.666666667%;
-			margin-left: -16.666666667vw;
-			min-height: 100vh !important;
+		#scroll{
 			background-image: url("text.png");
-  			background-repeat: repeat;
-  			background-size: 16.666666667vw auto;
-  			animation: backg 10s linear infinite;
-  			overflow: hidden;
-		}
-
-		@keyframes backg{
-			from {
-    			transform: translateX(0%);
- 			}
-
-  			to {
-    			transform: translateX(16.666666667vw);
-  			}
-		}
-
-		@media only screen and (max-width: 1200px)
-		{
-			main{
-				background-size: 20vw auto;
-				width: 120%;
-				margin-left: -20vw;
-			}
-
-			@keyframes backg{
-				from {
-    				transform: translateX(0%);
- 				}
-
-  				to {
-    				transform: translateX(20vw);
-  				}
-			}
-		}
-
-		@media only screen and (max-width: 1024px)
-		{
-			main{
-				background-size: 25vw auto;
-				width: 125%;
-				margin-left: -25vw;
-			}
-
-			@keyframes backg{
-				from {
-    				transform: translateX(0%);
- 				}
-
-  				to {
-    				transform: translateX(25vw);
-  				}
-			}
-		}
-
-		@media only screen and (max-width: 768px){
-			main{
-				background-size: 33.33333333334vw auto;
-				width: 133.33333333334%;
-				margin-left: -33.33333333334vw;
-			}
-				
-			@keyframes backg{
-				from {
-    				transform: translateX(0%);
- 				}
-
-  				to {
-    				transform: translateX(33.33333333334vw);
-  				}
-			}
-		}
-		
-		@media only screen and (max-width: 480px){
-			main{
-				background-size: 50vw auto;
-				width: 150%;
-				margin-left: -50vw;
-			}
-
-			@keyframes backg{
-				from {
-    				transform: translateX(0%);
- 				}
-
-  				to {
-    				transform: translateX(50vw);
-  				}
-			}
 		}
 	</style>
 	<script src="randomizer.js"></script>
 </head>
 <body onload="firstrandom(2)">
 	<a id="reseter" href="3.html" style="text-decoration: none;">
-		<main></main>
+		<main>
+			<div id="scroll"></div>
+		</main>
 	</a>
 </body>
 </html>

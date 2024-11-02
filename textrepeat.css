@@ -1,0 +1,102 @@
+body{
+	overflow: hidden;
+}
+
+main{
+	overflow: hidden;
+}
+
+#scroll{
+	width: 116.666666667vw;
+	height: 100%;
+  	min-height: 100vh;
+	min-height: 100dvh;
+	margin-left: -16.666666667vw;
+	background-repeat: repeat;
+  	background-size: 16.666666667vw auto;
+  	animation: backg 10s linear infinite;
+}
+
+@keyframes backg{
+	from {
+    	transform: translateX(0%);
+ 	}
+
+  	to {
+    	transform: translateX(16.666666667vw);
+  	}
+}
+
+@media only screen and (max-width: 1200px)
+{
+	#scroll{
+		width: 120vw;
+		margin-left: -20vw;
+		background-size: 20vw auto;		
+	}
+
+	@keyframes backg{
+		from {
+    		transform: translateX(0%);
+ 		}
+
+  		to {
+    		transform: translateX(20vw);
+  		}
+	}
+}
+
+@media only screen and (max-width: 1024px)
+{
+	#scroll{
+		width: 125vw;
+		margin-left: -25vw;
+		background-size: 25vw auto;
+	}
+
+	@keyframes backg{
+		from {
+    		transform: translateX(0%);
+ 		}
+
+  		to {
+    		transform: translateX(25vw);
+  		}
+	}
+}
+
+@media only screen and (max-width: 768px){
+	#scroll{
+		width: 133.33333333334vw;
+		margin-left: -33.33333333334vw;
+		background-size: 33.33333333334vw auto;
+	}
+				
+	@keyframes backg{
+		from {
+    		transform: translateX(0%);
+ 		}
+
+  		to {
+    		transform: translateX(33.33333333334vw);
+  		}
+	}
+}
+		
+@media only screen and (max-width: 480px){
+	#scroll{
+		width: 150vw;
+		margin-left: -50vw;
+		background-size: 50vw auto;
+	}
+
+	@keyframes backg{
+		from {
+    		transform: translateX(0%);
+ 		}
+
+  		to {
+    		transform: translateX(50vw);
+  		}
+	}
+}

@@ -4,56 +4,44 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Flesh Enterprises</title>
+	<link rel="stylesheet" href="initialize.css">
 	<link rel="shortcut icon" type="image" href="Logo.png">
 	<style>
 		body{
-			padding: 0px;
-  			margin: 0px;
   			background-color: #ffb6c1;
-  			height: 100vh;
-  			min-height: 100vh;
-			width: 100%;
 			overflow: hidden;
 		}
 
-		html{
-  			height: 100%;
-  			min-height: 100%;
-  			overflow: hidden;
-		}
-
 		main{
-			height: 100%;
-			min-height: 100%;
-			max-height: 100vh;
+			overflow: hidden;
 		}
 
 		#phantoms{
-			width: 100vw;
-			height: auto;
-			max-width: 100vw;
-			max-height: 100vh;
 			width: auto;
+			max-width: 100vw;
+			height: 100vh;
+			max-height: 100vh;
 			margin: 0px auto;
 		}
 
 		img{
-			filter: drop-shadow( 0 0 5vw rgb(0, 0, 0, 50%));
-			position: absolute;
+			max-width: 100vw;
 			height: 92vh;
 			max-height: 92vh !important;
 			max-height: 92dvh !important;
+			position: absolute;
 			bottom: 0px;
-			max-width: 100vw;
 			object-fit: contain;
 			object-position: bottom;
 			z-index: 2;
+			filter: drop-shadow( 0 0 5vw rgb(0, 0, 0, 50%));
 		}
 
 		.scroll{
-			height: 100vh;
+			width: 120vw;
+			height: 100%;
   			min-height: 100vh;
-			width: 120%;
+			min-height: 100dvh;
 			background-image: url("part7.png");
   			background-repeat: repeat;
   			background-size: 20vw auto;
@@ -73,7 +61,7 @@
 
 		@media only screen and (max-width: 768px){
 			.scroll{
-				width: 125%;
+				width: 125vw;
 				background-size: 25vw auto;
 			}
 				
@@ -90,7 +78,7 @@
 		
 		@media only screen and (max-width: 480px){
 			.scroll{
-				width: 133.333333333%;
+				width: 133.333333333vw;
 				background-size: 33.333333333vw auto;
 			}
 				
@@ -109,10 +97,10 @@
 </head>
 <body onload="firstrandom(3)">
 	<a id="reseter" href="4.html" style="text-decoration: none;">
-		<img src="part7.png" id="phantoms" height="256" width="173">
-		<div class="scroll">
-			<main></main>
-		</div>
+		<main>
+			<img src="part7.png" id="phantoms" height="256" width="173">
+			<div class="scroll"></div>
+		</main>
 	</a>
 </body>
 </html>
