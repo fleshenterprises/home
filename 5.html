@@ -19,13 +19,13 @@
 			max-height: 92vh;
 			max-height: 92dvh;
 			padding: 0px;
-  			margin: 0px;
+  			margin: 0px auto;
 			position: absolute;
 			bottom: 0px;
 			object-fit: contain;
 			object-position: bottom;
 			z-index: 2;
-			filter: drop-shadow(0 0 5vw rgb(0, 0, 0, 25%));
+			filter: drop-shadow(0 0 5vw rgba(0, 0, 0, 25%));
 			animation: backg2 10s linear infinite;
 		}
 
@@ -40,6 +40,7 @@
   			background-image: url(pattern.png);
   			background-repeat: repeat;
   			background-size: 20vw auto;
+  			z-index: 1;
   			filter: blur(clamp(2px, .15vw, .15vw));
   			animation: backg 10s linear infinite;
 		}
@@ -130,7 +131,7 @@
 	<a id="reseter" href="index.html" style="text-decoration: none;">
 		<main>
 			<img src="Gunguy831.png" height="100" width="100" alt="Gun">
-			<div class="crowd" id="people"></div>
+			<div class="crowd"></div>
 		</main>
 	</a>
 </body>

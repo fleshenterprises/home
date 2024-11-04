@@ -1,10 +1,10 @@
 function firstrandom(number)
 {
-	var andomize = ((Math.floor(Math.random() * 5)) + 1);
+	var andomize = ((Math.floor(Math.random() * 6)) + 1);
 	
 	while (andomize == number)
 	{
-		andomize = ((Math.floor(Math.random() * 5)) + 1);
+		andomize = ((Math.floor(Math.random() * 6)) + 1);
 	}
 
 	andomize = andomize + ".html";
