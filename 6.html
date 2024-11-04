@@ -9,6 +9,12 @@
 	<style>
 		body{
 			background-color: #ffffff;
+			animation: shake 5s linear infinite;
+			transform-origin: bottom;
+		}
+
+		main{
+			transform-origin: bottom;
 		}
 
 		img{
@@ -25,6 +31,15 @@
 			object-fit: contain;
 			object-position: bottom;
 			z-index: 2;
+			transform-origin: bottom;
+		}
+
+		@keyframes shake {
+  			0% { transform: rotate(0deg); }
+  			25% { transform: rotate(-1deg); }
+  			50% { transform: rotate(0deg); }
+ 		 	75% { transform: rotate(1deg); }
+ 		 	100% { transform: rotate(0deg); }
 		}
 	</style>
 	<script src="randomizer.js"></script>
