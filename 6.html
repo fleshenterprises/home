@@ -9,12 +9,6 @@
 	<style>
 		body{
 			background-color: #ffffff;
-			animation: shake 7.5s ease-in-out infinite;
-			transform-origin: bottom;
-		}
-
-		main{
-			transform-origin: bottom;
 		}
 
 		img{
@@ -27,12 +21,14 @@
 			padding: 0px;
   			margin: 0px auto;
 			position: absolute;
-			bottom: 0px;
+			bottom: -1vh;
 			object-fit: contain;
 			object-position: bottom;
 			z-index: 2;
 			transform-origin: bottom;
 			transform: rotate(-1deg);
+			animation: shake 7.5s ease-in-out infinite;
+			transform-origin: bottom;
 		}
 
 		@keyframes shake {
@@ -42,11 +38,29 @@
 		}
 	</style>
 	<script src="randomizer.js"></script>
+	<script>
+		window.addEventListener("load", flash, true); 
+
+		function flash()
+		{
+				setTimeout(() => 
+				{
+					document.getElementById("impaled").src = "impaled2full.png";
+				}, 406.25);
+
+				setTimeout(() => 
+				{
+					document.getElementById("impaled").src = "impaledfull.png";
+					flash();
+				}, 812.5);
+				
+		}
+	</script>
 </head>
 <body onload="firstrandom(6)" id="back">
 	<a id="reseter" href="index.html" style="text-decoration: none;">
 		<main>
-			<img src="impaledfull.png" height="100" width="100" alt="Impaled" id="impaled">
+			<img src="impaledfull.png" height="100" width="100" alt="Justice" id="impaled">
 		</main>
 	</a>
 </body>
