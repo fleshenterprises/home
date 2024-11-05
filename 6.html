@@ -11,7 +11,7 @@
 			background-color: #ffffff;
 		}
 
-		img{
+		#impaled{
 			width: 100%;
 			max-width: 100vw;
 			max-width: 100dvw;
@@ -27,40 +27,27 @@
 			z-index: 2;
 			transform-origin: bottom;
 			transform: rotate(-1deg);
-			animation: shake 7.5s ease-in-out infinite;
-			transform-origin: bottom;
+			animation: swing 7.5s ease-in-out infinite, pain 0.8125s linear infinite;
 		}
 
-		@keyframes shake {
+		@keyframes swing{
   			0% { transform: rotate(-1deg); }
  		 	50% { transform: rotate(1deg); }
  		 	100% { transform: rotate(-1deg); }
 		}
+
+		@keyframes pain{
+			0% { content: url("impaledfull.png"); }
+ 		 	50% { content: url("impaled2full.png"); }
+ 		 	100% { content: url("impaledfull.png"); }
+ 		 }
 	</style>
 	<script src="randomizer.js"></script>
-	<script>
-		window.addEventListener("load", flash, true); 
-
-		function flash()
-		{
-				setTimeout(() => 
-				{
-					document.getElementById("impaled").src = "impaled2full.png";
-				}, 406.25);
-
-				setTimeout(() => 
-				{
-					document.getElementById("impaled").src = "impaledfull.png";
-					flash();
-				}, 812.5);
-				
-		}
-	</script>
 </head>
 <body onload="firstrandom(6)" id="back">
 	<a id="reseter" href="index.html" style="text-decoration: none;">
 		<main>
-			<img src="impaledfull.png" height="100" width="100" alt="Justice" id="impaled">
+			<img src="impaledfull2.png" height="100" width="100" alt="Justice" id="impaled">
 		</main>
 	</a>
 </body>

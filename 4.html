@@ -29,40 +29,21 @@
 			display: block;
 			position: fixed;
 			object-fit: contain;
+			animation: flash 2s linear infinite;
 		}
+
+		@keyframes flash {
+			0% { content: url("enterprises logo3.png"); }
+ 		 	7.25% { content: url("enterprises logo2.png"); }
+ 		 	100% { content: url("enterprises logo2.png"); }
+ 		 }
 	</style>
 	<script src="randomizer.js"></script>
-	<script>
-		window.addEventListener("load", first, true); 
-
-		function first()
-		{
-			document.getElementById("eye").src = "enterprises logo3.png";
-			setTimeout(() => 
-			{
-				document.getElementById("eye").src = "enterprises logo2.png";
-			}, 130);
-			flash();
-		}
-
-		function flash()
-		{
-			setTimeout(() => 
-			{
-				document.getElementById("eye").src = "enterprises logo3.png";
-				setTimeout(() => 
-				{
-					document.getElementById("eye").src = "enterprises logo2.png";
-				}, 125);
-				flash();
-			}, 2000);
-		}
-	</script>
 </head>
 <body onload="firstrandom(4)">
 	<a id="reseter" href="5.html" style="text-decoration: none;">
 		<main>
-			<img id="eye" src="enterprises logo2.png" height="100" width="100" alt="See">
+			<img src="enterprises logo2.png" height="100" width="100" alt="See" id="eye">
 		</main>
 	</a>
 </body>
