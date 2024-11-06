@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Flesh Enterprises</title>
+	<link rel="stylesheet" href="initialize.css">
+	<link rel="shortcut icon" type="image" href="Logo.png">
+	<style>
+		body{
+			background-color: #ffffff;
+		}
+
+		#scroll{
+			width: 130vw;
+			height: 100%;
+  			min-height: 100vh;
+  			min-height: 100dvh;
+  			padding: 0px;
+  			margin: 0px;
+			margin-left: -30vw;
+			background-image: url("day.png");
+			background-repeat: repeat;
+  			background-size: 30vw auto;
+  			animation: backg 10s linear infinite;
+		}
+
+		@keyframes backg{
+			from {
+    			transform: translateX(30vw);
+ 			}
+
+  			to {
+    			transform: translateX(0%);
+  			}
+		}
+
+ 		 @media only screen and (max-width: 768px){
+			#scroll{
+				width: 160vw;
+				margin-left: -60vw;
+				background-size: 60vw auto;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateX(60vw);
+ 				}
+
+  				to {
+    				transform: translateX(0%);
+  				}
+			}
+		}
+		
+		@media only screen and (max-width: 480px){
+			#scroll{
+				width: 190vw;
+				margin-left: -90vw;
+				background-size: 90vw auto;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateX(90vw);
+ 				}
+
+  				to {
+    				transform: translateX(0%);
+  				}
+			}
+		}
+	</style>
+	<script src="randomizer.js"></script>
+</head>
+<body onload="firstrandom(8)" id="back">
+	<a id="reseter" href="index.html" style="text-decoration: none;">
+		<main>
+			<div id="scroll"></div>
+		</main>
+	</a>
+</body>
+</html>
