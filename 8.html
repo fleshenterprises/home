@@ -12,22 +12,22 @@
 		}
 
 		#scroll{
-			width: 130vw;
+			width: calc(100vw + ((50vh / 399) * 529));
 			height: 100%;
   			min-height: 100vh;
   			min-height: 100dvh;
   			padding: 0px;
   			margin: 0px;
-			margin-left: -30vw;
+			margin-left: calc((-50vh / 399) * 529);
 			background-image: url("day.png");
 			background-repeat: repeat;
-  			background-size: 30vw auto;
+  			background-size: auto 50vh;
   			animation: backg 30s linear infinite;
 		}
 
 		@keyframes backg{
 			from {
-    			transform: translateX(30vw);
+    			transform: translateX(calc((50vh / 399) * 529));
  			}
 
   			to {
@@ -37,14 +37,14 @@
 
  		 @media only screen and (max-width: 768px){
 			#scroll{
-				width: 160vw;
-				margin-left: -60vw;
-				background-size: 60vw auto;
+				width: calc(100vw + ((33.3334vh / 399) * 529));
+				margin-left: calc((-33.3334vh / 399) * 529);
+				background-size: auto 33.3334vh;
 			}
 
 			@keyframes backg{
 				from {
-    				transform: translateX(60vw);
+    				transform: translateX(calc((33.3334vh / 399) * 529));
  				}
 
   				to {
@@ -55,14 +55,14 @@
 		
 		@media only screen and (max-width: 480px){
 			#scroll{
-				width: 190vw;
-				margin-left: -90vw;
-				background-size: 90vw auto;
+				width: calc(100vw + ((25vh / 399) * 529));
+				margin-left: calc((-25vh / 399) * 529);
+				background-size: auto 25vh;
 			}
 
 			@keyframes backg{
 				from {
-    				transform: translateX(90vw);
+    				transform: translateX(calc((25vh / 399) * 529));
  				}
 
   				to {
