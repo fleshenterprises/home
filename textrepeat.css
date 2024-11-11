@@ -1,13 +1,13 @@
 #scroll{
-	width: 116.666666667vw;
+	width: 116.667vw;
 	height: 100%;
   	min-height: 100vh;
   	min-height: 100dvh;
   	padding: 0px;
   	margin: 0px;
-	margin-left: -16.666666667vw;
+	margin-left: -16.667vw;
 	background-repeat: repeat;
-  	background-size: 16.666666667vw auto;
+  	background-size: 16.667vw auto;
   	animation: backg 10s linear infinite;
 }
 
@@ -17,7 +17,7 @@
  	}
 
   	to {
-    	transform: translateX(16.666666667vw);
+    	transform: translateX(16.667vw);
   	}
 }
 
@@ -61,9 +61,9 @@
 
 @media only screen and (max-width: 768px){
 	#scroll{
-		width: 133.33333333334vw;
-		margin-left: -33.33333333334vw;
-		background-size: 33.33333333334vw auto;
+		width: 133.334vw;
+		margin-left: -33.334vw;
+		background-size: 33.334vw auto;
 	}
 				
 	@keyframes backg{
@@ -72,7 +72,7 @@
  		}
 
   		to {
-    		transform: translateX(33.33333333334vw);
+    		transform: translateX(33.334vw);
   		}
 	}
 }
