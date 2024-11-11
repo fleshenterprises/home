@@ -66,8 +66,8 @@
 		@media only screen and (max-width: 1200px)
 		{
 			.crowd{
-				height: calc(100vh + 25vw);
-				background-size: auto 25vw;
+				height: calc(100vh + 27.5vw);
+				background-size: auto 27.5vw;
 			}
 
 			@keyframes backg{
@@ -76,7 +76,7 @@
  				}
 
   				to {
-    				transform: translateY(-25vw);
+    				transform: translateY(-27.5vw);
   				}
 			}
 		}
@@ -84,8 +84,8 @@
 		@media only screen and (max-width: 1024px)
 		{
 			.crowd{
-				height: calc(100vh + 33.334vw);
-				background-size: auto 33.334vw;
+				height: calc(100vh + 35vw);
+				background-size: auto 35vw;
 			}
 
 			@keyframes backg{
@@ -94,12 +94,29 @@
  				}
 
   				to { 
-    				transform: translateY(-33.334vw);
+    				transform: translateY(-35vw);
   				}
 			}
 		}
 
 		@media only screen and (max-width: 768px){
+			.crowd{
+				height: calc(100vh + 42.5vw);
+				background-size: auto 42.5vw;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateY(0%);
+ 				}
+
+  				to { 
+    				transform: translateY(-42.5vw);
+  				}
+			}
+		}
+
+		@media only screen and (max-width: 480px){
 			.crowd{
 				height: calc(100vh + 50vw);
 				background-size: auto 50vw;
@@ -112,23 +129,6 @@
 
   				to {
     				transform: translateY(-50vw);
-  				}
-			}
-		}
-
-		@media only screen and (max-width: 480px){
-			.crowd{
-				height: calc(100vh + 66.667vw);
-				background-size: auto 66.667vw;
-			}
-
-			@keyframes backg{
-				from {
-    				transform: translateY(0%);
- 				}
-
-  				to {
-    				transform: translateY(-66.667vw);
   				}
 			}
 		}
