@@ -8,75 +8,31 @@
 	<link rel="shortcut icon" type="image" href="Logo.png">
 	<style>
 		body{
-			background-color: #ffffff;
+			background-color: #ffb6c1;
 		}
 
-		#scroll{
-			width: calc(100vw + ((50vh / 399) * 529));
-			height: 100%;
-  			min-height: 100vh;
-  			min-height: 100dvh;
-  			padding: 0px;
+		main{
+			display: flex;
+  			justify-content: center;
+  			align-items: center;
+		}
+
+		#ours{
+			height: 50vh;
+			height: 50dvh;
+			width: auto;
+			max-width: 94.728682171%;
+			object-fit: contain;
+			padding: 0px;
   			margin: 0px;
-			margin-left: calc((-50vh / 399) * 529);
-			background-image: url("day.png");
-			background-repeat: repeat;
-  			background-size: auto 50vh;
-  			animation: backg 30s linear infinite;
-		}
-
-		@keyframes backg{
-			from {
-    			transform: translateX(calc((50vh / 399) * 529));
- 			}
-
-  			to {
-    			transform: translateX(0%);
-  			}
-		}
-
- 		 @media only screen and (max-width: 1024px){
-			#scroll{
-				width: calc(100vw + ((33.334vh / 399) * 529));
-				margin-left: calc((-33.334vh / 399) * 529);
-				background-size: auto 33.334vh;
-			}
-
-			@keyframes backg{
-				from {
-    				transform: translateX(calc((33.334vh / 399) * 529));
- 				}
-
-  				to {
-    				transform: translateX(0%);
-  				}
-			}
-		}
-		
-		@media only screen and (max-width: 480px){
-			#scroll{
-				width: calc(100vw + ((25vh / 399) * 529));
-				margin-left: calc((-25vh / 399) * 529);
-				background-size: auto 25vh;
-			}
-
-			@keyframes backg{
-				from {
-    				transform: translateX(calc((25vh / 399) * 529));
- 				}
-
-  				to {
-    				transform: translateX(0%);
-  				}
-			}
 		}
 	</style>
 	<script src="randomizer.js"></script>
 </head>
 <body onload="firstrandom(8)">
-	<a id="reseter" href="9.html" style="text-decoration: none;">
+	<a id="reseter" href="index.html" style="text-decoration: none;">
 		<main>
-			<div id="scroll"></div>
+			<img src="the world is.png" alt="The world is" height="500" width="500" id="ours">
 		</main>
 	</a>
 </body>
