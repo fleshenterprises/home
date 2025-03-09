@@ -24,6 +24,7 @@ function firstrandom(number)
 		if(number != pageArray[0])
 		{
 			pageArray[1] = number;
+			checkable = true;
 		}
 	}
 	else if(pageArray.length === 2)
@@ -39,6 +40,7 @@ function firstrandom(number)
 	if(checkable == true)
 	{
 		secondLastPage = pageArray[0];
+
 		while ((andomize == number) || (andomize == secondLastPage))
 		{
 			andomize = ((Math.floor(Math.random() * 8)) + 1);
@@ -90,6 +92,6 @@ function firstrandom(number)
 	{
 		document.getElementById("reseter").href = "index.html";
 	}
-
+	
 	sessionStorage.setItem("lastTwoPages", JSON.stringify(pageArray));
 }
