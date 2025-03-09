@@ -14,8 +14,7 @@ function firstrandom(number)
 			andomize = ((Math.floor(Math.random() * 8)) + 1);
 		}
 	}
-	
-	if((number == 1) || (number ==  2))
+	else if((number == 1) || (number ==  2))
 	{
 		while((andomize == 1) || (andomize == 2))
 		{
@@ -27,7 +26,6 @@ function firstrandom(number)
 	{
 		document.getElementById("reseter").href = andomize + ".html";
 	}
-
 	else
 	{
 		document.getElementById("reseter").href = "index.html";
