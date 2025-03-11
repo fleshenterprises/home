@@ -50,11 +50,13 @@ function firstrandom(number)
 			break;
 	}
 
+	sessionStorage.setItem("lastTwoPages", JSON.stringify(pageArray));
+
 	if(checkable == true)
 	{
 		secondLastPage = pageArray[0];
 
-		while ((andomize == number) || (andomize == secondLastPage))
+		while((andomize == number) || (andomize == secondLastPage))
 		{
 			andomize = ((Math.floor(Math.random() * 8)) + 1);
 		}
@@ -76,7 +78,7 @@ function firstrandom(number)
 	}
 	else
 	{
-		while ((andomize == number))
+		while(andomize == number)
 		{
 			andomize = ((Math.floor(Math.random() * 8)) + 1);
 		}
@@ -105,6 +107,4 @@ function firstrandom(number)
 	{
 		document.getElementById("reseter").href = "index.html";
 	}
-	
-	sessionStorage.setItem("lastTwoPages", JSON.stringify(pageArray));
 }
