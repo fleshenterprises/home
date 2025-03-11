@@ -59,9 +59,9 @@ function firstrandom(number)
 			andomize = ((Math.floor(Math.random() * 8)) + 1);
 		}
 
-		if((number == 8) || (number ==  7))
+		if((number == 7) || (number ==  8))
 		{
-			while((andomize == 8) || (andomize == 7) || (andomize == secondLastPage))
+			while((andomize == 7) || (andomize == 8) || (andomize == secondLastPage))
 			{
 				andomize = ((Math.floor(Math.random() * 8)) + 1);
 			}
@@ -81,9 +81,9 @@ function firstrandom(number)
 			andomize = ((Math.floor(Math.random() * 8)) + 1);
 		}
 
-		if((number == 8) || (number ==  7))
+		if((number == 7) || (number ==  8))
 		{
-			while((andomize == 8) || (andomize == 7))
+			while((andomize == 7) || (andomize == 8))
 			{
 				andomize = ((Math.floor(Math.random() * 8)) + 1);
 			}
