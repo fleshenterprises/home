@@ -4,7 +4,6 @@ var checkable;
 function firstrandom(number)
 {
 	var andomize = ((Math.floor(Math.random() * 8)) + 1);
-	checkable = false;
 
 	if(sessionStorage.getItem("lastTwoPages") == null)
 	{
@@ -15,26 +14,40 @@ function firstrandom(number)
 		pageArray = JSON.parse(sessionStorage.getItem("lastTwoPages"));
 	}
 
-	if(pageArray.length === 0)
+	switch(pageArray.length)
 	{
-		pageArray[0] = number;
-	}
-	else if(pageArray.length === 1)
-	{
-		if(number != pageArray[0])
-		{
-			pageArray[1] = number;
+		case 0:
+			pageArray[0] = number;
+			checkable = false;
+			break;
+
+		case 1:
+			if(number != pageArray[0])
+			{
+				pageArray[1] = number;
+				checkable = true;
+			}
+			else
+			{
+				checkable = false;
+			}
+
+			break;
+		
+		case 2:
+			if(number != pageArray[1])
+			{
+				pageArray[0] = pageArray[1];
+				pageArray[1] = number;
+			}
+
 			checkable = true;
-		}
-	}
-	else if(pageArray.length === 2)
-	{
-		if(number != pageArray[1])
-		{
-			pageArray[0] = pageArray[1];
-			pageArray[1] = number;
-		}
-		checkable = true;
+			break;
+		
+		default:
+			checkable = false;
+			console.log("wrong page array length");
+			break;
 	}
 
 	if(checkable == true)
@@ -48,14 +61,14 @@ function firstrandom(number)
 
 		if((number == 8) || (number ==  7))
 		{
-			while((andomize == 8) || (andomize == 7) || (andomize == secondLastPage) || (andomize == number))
+			while((andomize == 8) || (andomize == 7) || (andomize == secondLastPage))
 			{
 				andomize = ((Math.floor(Math.random() * 8)) + 1);
 			}
 		}
 		else if((number == 1) || (number ==  2))
 		{
-			while((andomize == 1) || (andomize == 2) || (andomize == secondLastPage) || (andomize == number))
+			while((andomize == 1) || (andomize == 2) || (andomize == secondLastPage))
 			{
 				andomize = ((Math.floor(Math.random() * 8)) + 1);
 			}
@@ -70,21 +83,21 @@ function firstrandom(number)
 
 		if((number == 8) || (number ==  7))
 		{
-			while((andomize == 8) || (andomize == 7) || (andomize == number))
+			while((andomize == 8) || (andomize == 7))
 			{
 				andomize = ((Math.floor(Math.random() * 8)) + 1);
 			}
 		}
 		else if((number == 1) || (number ==  2))
 		{
-			while((andomize == 1) || (andomize == 2) || (andomize == number))
+			while((andomize == 1) || (andomize == 2))
 			{
 				andomize = ((Math.floor(Math.random() * 8)) + 1);
 			}
 		}
 	}
 
-	if (andomize != 1) 
+	if(andomize != 1) 
 	{
 		document.getElementById("reseter").href = andomize + ".html";
 	}
