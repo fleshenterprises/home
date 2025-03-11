@@ -48,14 +48,14 @@ function firstrandom(number)
 
 		if((number == 8) || (number ==  7))
 		{
-			while((andomize == 8) || (andomize == 7) || (andomize == secondLastPage))
+			while((andomize == 8) || (andomize == 7) || (andomize == secondLastPage) || (andomize == number))
 			{
 				andomize = ((Math.floor(Math.random() * 8)) + 1);
 			}
 		}
 		else if((number == 1) || (number ==  2))
 		{
-			while((andomize == 1) || (andomize == 2) || (andomize == secondLastPage))
+			while((andomize == 1) || (andomize == 2) || (andomize == secondLastPage) || (andomize == number))
 			{
 				andomize = ((Math.floor(Math.random() * 8)) + 1);
 			}
@@ -70,14 +70,14 @@ function firstrandom(number)
 
 		if((number == 8) || (number ==  7))
 		{
-			while((andomize == 8) || (andomize == 7))
+			while((andomize == 8) || (andomize == 7) || (andomize == number))
 			{
 				andomize = ((Math.floor(Math.random() * 8)) + 1);
 			}
 		}
 		else if((number == 1) || (number ==  2))
 		{
-			while((andomize == 1) || (andomize == 2))
+			while((andomize == 1) || (andomize == 2) || (andomize == number))
 			{
 				andomize = ((Math.floor(Math.random() * 8)) + 1);
 			}
