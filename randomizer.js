@@ -1,40 +1,17 @@
 var pageArray;
 var checkable;
-var storageAvailable;
 
 function firstrandom(number)
 {
 	var andomize = ((Math.floor(Math.random() * 8)) + 1);
 
-	try 
+	if(sessionStorage.getItem("lastTwoPages") == null)
 	{
-    	var storage = window.sessionStorage;
-      	storage.setItem("test", "test");
-     	storage.removeItem("test");    
-     	storageAvailable = true;
-    } 
-    catch(error) 
-    {
-      	storageAvailable = false;
-    }
-
-	if(storageAvailable == true)
+		pageArray = new Array();
+	}
+	else
 	{
-		try
-		{
-			if(sessionStorage.getItem("lastTwoPages") === null)
-			{
-				pageArray = new Array();
-			}
-			else
-			{
-				pageArray = JSON.parse(sessionStorage.getItem("lastTwoPages"));
-			}
-		}
-		catch(error)
-		{
-			pageArray = new Array();
-		}
+		pageArray = JSON.parse(sessionStorage.getItem("lastTwoPages"));
 	}
 
 	switch(pageArray.length)
@@ -73,17 +50,7 @@ function firstrandom(number)
 			break;
 	}
 
-	if(storageAvailable == true)
-	{
-		try
-		{
-			sessionStorage.setItem("lastTwoPages", JSON.stringify(pageArray));
-		}
-		catch(error)
-		{
-			//nothing to save
-		}
-	}
+	sessionStorage.setItem("lastTwoPages", JSON.stringify(pageArray));
 
 	if(checkable == true)
 	{
